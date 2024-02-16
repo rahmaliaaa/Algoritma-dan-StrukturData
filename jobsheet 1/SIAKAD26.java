@@ -5,7 +5,7 @@ public class SIAKAD26 {
     
         double totalNilai = 0;
         double totalBobotSKS = 0;
-        String[] namaMK = {"Praktikum Dasar Pemograman","Pengantar Akuntansi, Manajemen, dan Bisnis","Matematika Dasar","Konsep Teknologi Informasi","Dasar Pemograman","Dasar Pemograman","Bahasa Inggris","Critical Thinking dan Problem Solving","Bahasa Indonesia","Agama"};
+        String[] namaMK = {"Praktikum Dasar Pemograman","Pengantar Akuntansi, Manajemen, dan Bisnis","Matematika Dasar","Konsep Teknologi Informasi","Dasar Pemograman","Bahasa Inggris","Critical Thinking dan Problem Solving","Bahasa Indonesia","Agama"};
         double[] nilaiAngka = new double[9];
         String[] nilaiHuruf = new String[9];
         String[] kualifikasi = new String[9];
@@ -16,7 +16,7 @@ public class SIAKAD26 {
         System.out.println("======================================================================");
 
         for (int i = 0; i < nilaiAngka.length; i++){
-            System.out.print("Masukkan nilai angka untuk " + namaMK[i] + ": ");
+            System.out.print("Masukkan nilai angka untuk MK " + namaMK[i] + ": ");
             nilaiAngka[i] = sc.nextDouble();
         }
         System.out.println("======================================================================");
@@ -55,15 +55,16 @@ public class SIAKAD26 {
                 bobotSKS[i] = 0.0;
                 kualifikasi[i] = "Gagal";
             }
-            totalNilai += bobotSKS[i] * 3;
+            totalNilai += bobotSKS[i];
             totalBobotSKS += 3;
-
+        }
         double IpSemester = totalNilai / totalBobotSKS;
+
         for (int i = 0; i < namaMK.length; i++){
+            totalNilai += bobotSKS[i]* nilaiAngka[i];
             System.out.printf("| %-40s | %-12.2f | %-12s | %-12.2f | %-16s |\n", namaMK[i], nilaiAngka[i], nilaiHuruf[i], bobotSKS[i], kualifikasi[i]);
-            }
+        }
         System.out.println("==========================================================================");
         System.out.println("IP Semester : " +IpSemester);
-        }
     }
 }
