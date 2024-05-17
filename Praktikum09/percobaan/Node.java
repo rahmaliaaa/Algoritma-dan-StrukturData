@@ -1,3 +1,4 @@
+package percobaan;
 public class Node {
     public int data;
     public Node next;

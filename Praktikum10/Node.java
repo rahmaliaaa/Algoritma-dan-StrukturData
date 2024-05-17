@@ -6,7 +6,7 @@ public class Node {
     Node next;
 
     public Node(int data) {
-        this.data = data;//modifikasi
+        this.data = data;
         this.prev = null;
         this.next = null;
     }

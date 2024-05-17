@@ -1,4 +1,4 @@
-
+package percobaan;
 public class LinkedList {
     Node head;
 

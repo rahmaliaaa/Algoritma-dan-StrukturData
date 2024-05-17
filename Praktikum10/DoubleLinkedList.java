@@ -9,12 +9,26 @@ public class DoubleLinkedList {
     }
     public void print() {
         if (!isEmpty()) {
-            System.out.print("Isi linked list: ");
+            System.out.print("Isi linked list : ");
             Node currentNode = head;
     
             while (currentNode != null) {
                 System.out.print(currentNode.data + "\t");
                 currentNode = currentNode.next;
+            }
+            System.out.println();
+        } else {
+            System.out.println("Linked list kosong");
+        }
+    }
+    public void reversePrint(){
+        if (!isEmpty()){
+            System.out.print("Isi Linked list: ");
+            Node currentNode = tail;
+
+            while (currentNode != null) {
+                System.out.print(currentNode.data + "\t");
+                currentNode = currentNode.prev;
             }
             System.out.println();
         } else {
@@ -100,6 +114,30 @@ public class DoubleLinkedList {
         }
         System.out.println("Data tidak ditemukan");
         return -1;
+    }
+    public void insertAfter(int key, int input) { //soal tugas nomor 3
+        Node newNode = new Node(input);
+
+        if (!isEmpty()) {
+            Node currentNode = head;
+
+            while (currentNode != null) {
+                if (currentNode.data == key) {
+                    if (currentNode == tail) {
+                        addLast(input);
+                    } else {
+                        newNode.next = currentNode.next;
+                        newNode.prev = currentNode;
+                        currentNode.next.prev = newNode;
+                        currentNode.next = newNode;
+                    }
+                    break;
+                }
+                currentNode = currentNode.next;
+            }
+        } else {
+            System.out.print("Linked list kosong");
+        }
     }
 }
 

@@ -1,4 +1,4 @@
-
+package percobaan;
 public class SLLMain {
     public static void main(String[] args) {
         LinkedList myLinkedList = new LinkedList();
