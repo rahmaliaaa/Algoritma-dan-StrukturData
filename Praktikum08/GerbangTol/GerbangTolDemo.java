@@ -1,4 +1,4 @@
-//package Praktikum08
+package Praktikum08.GerbangTol;
 import java.util.Scanner;
 
 public class GerbangTolDemo {

@@ -1,4 +1,4 @@
-// Kelas Kendaraan
+package Praktikum08.GerbangTol;
 public class Kendaraan {
     private String noPlat;
     private String noKartu;
