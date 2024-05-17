@@ -1,4 +1,4 @@
-package Praktikum08.GerbangTol;
+package GerbangTol;
 public class Kendaraan {
     private String noPlat;
     private String noKartu;

@@ -67,5 +67,39 @@ public class DoubleLinkedList {
             tail.next = null;
         }
     }
+    public int getData(int index) {
+        if (isEmpty()) {
+            System.out.println("Linked list kosong atau index tidak valid");
+        }
+    
+        Node currentNode = head;
+        int currentIndex = 0;
+        while (currentNode != null && currentIndex < index) {
+            currentNode = currentNode.next;
+            currentIndex++;
+        }
+        if (currentNode == null) {
+            System.out.println("Index tidak ditemukan");
+            return -1;
+        }
+        return currentNode.data;
+    }
+    public int indexOf(int data) {
+        if (isEmpty()) {
+            System.out.println("Linked list kosong");
+            return -1;
+        }
+        Node currentNode = head;
+        int currentIndex = 0;
+        while (currentNode != null) {
+            if (currentNode.data == data) {
+                return currentIndex;
+            }
+            currentNode = currentNode.next;
+            currentIndex++;
+        }
+        System.out.println("Data tidak ditemukan");
+        return -1;
+    }
 }
 

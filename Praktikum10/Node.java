@@ -7,5 +7,7 @@ public class Node {
 
     public Node(int data) {
         this.data = data;//modifikasi
+        this.prev = null;
+        this.next = null;
     }
 }

@@ -1,4 +1,4 @@
-package Praktikum08.GerbangTol;
+package GerbangTol;
 public class Queue {
     private Kendaraan[] data;
     private int max;

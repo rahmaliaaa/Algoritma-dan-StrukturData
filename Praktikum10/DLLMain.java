@@ -14,5 +14,10 @@ public class DLLMain {
         myDLL.print();
         myDLL.removeLast();
         myDLL.print();
+        myDLL.getData(2);
+        myDLL.addLast(800);
+        System.out.println("Data pada index 1: " +myDLL.getData(1));
+        myDLL.addLast(500);
+        System.out.println("Indeks dari data 500: " + myDLL.indexOf(500));
     }
 }
