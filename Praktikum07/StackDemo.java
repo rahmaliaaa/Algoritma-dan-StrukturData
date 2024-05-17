@@ -1,4 +1,4 @@
-package Praktikum08;
+package Praktikum07;
 
 public class StackDemo {
     public static void main(String[] args) {

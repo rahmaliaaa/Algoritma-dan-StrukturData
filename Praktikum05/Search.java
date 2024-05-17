@@ -1,4 +1,4 @@
-package Praktikum06;
+package Praktikum05;
 
 public class Search {
     public static int sequentialSearch(int[] arr, int target) {

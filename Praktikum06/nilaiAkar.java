@@ -1,4 +1,4 @@
-package Praktikum07;
+package Praktikum06;
 
 public class nilaiAkar {
     // Brute Force

@@ -1,4 +1,3 @@
-package Praktikum10;
 
 public class SLLMain {
     public static void main(String[] args) {

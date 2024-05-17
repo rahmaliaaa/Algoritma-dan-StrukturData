@@ -1,4 +1,4 @@
-package Praktikum10;
+
 
 public class ScavengerHuntPoint {
     private String question;

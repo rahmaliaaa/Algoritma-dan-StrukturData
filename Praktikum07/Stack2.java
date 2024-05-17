@@ -1,4 +1,4 @@
-package Praktikum08;
+package Praktikum07;
 import java.util.Scanner;
 
 public class Stack2 {

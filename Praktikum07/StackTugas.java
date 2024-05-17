@@ -1,4 +1,4 @@
-package Praktikum08;    
+package Praktikum07;    
     public class StackTugas {
         public int size;
         public String[] data;

@@ -1,4 +1,4 @@
-package Praktikum06;
+package Praktikum05;
 public class SortingAscending {
     public static void sequentialSearch(int[] arr,int key){
         for (int i =0; i < arr.length; i++){

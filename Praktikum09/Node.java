@@ -1,5 +1,3 @@
-package Praktikum10;
-
 public class Node {
     public int data;
     public Node next;

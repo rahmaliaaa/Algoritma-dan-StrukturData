@@ -1,4 +1,4 @@
-package Praktikum06;
+package Praktikum05;
 
 public class Sorted {
     public static int sequentialSearch(int[] arr, int key) {

@@ -1,4 +1,4 @@
-package Praktikum07;
+package Praktikum06;
 
 import java.util.Scanner;
 public class Faktorial {

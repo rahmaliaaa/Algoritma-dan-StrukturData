@@ -1,4 +1,4 @@
-package Praktikum10;
+
 
 public class LinkedList {
     Node head;

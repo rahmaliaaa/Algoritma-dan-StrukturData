@@ -1,4 +1,4 @@
-package Praktikum05;
+package Praktikum04;
 public class HotelMain {
     public static void main(String[] args) {
         Hotel [] hotels = new Hotel[5];
