@@ -8,7 +8,6 @@ public class Piramid {
         this.sisi = sisi;
         this.tinggi = tinggi;
     }
-
     public void tampilTinggi() {
         System.out.println("Tinggi: " + this.tinggi);
     }
