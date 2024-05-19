@@ -1,4 +1,6 @@
 package tugas;
+import java.util.Scanner;
+
 public class ScavengerHuntPoint {
     private String question;
     private String answer;
@@ -23,14 +25,15 @@ public class ScavengerHuntPoint {
     public ScavengerHuntPoint getNextPoint() {
         return nextPoint;
     }
-    public void setPrevPoint(ScavengerHuntPoint prevPoint){ //double linked list
+
+    public void setPrevPoint(ScavengerHuntPoint prevPoint) { //double linked list
         this.prevPoint = prevPoint;
     }
-    public ScavengerHuntPoint getPrevPoint(){ //double linked list
+
+    public ScavengerHuntPoint getPrevPoint() { //double linked list
         return prevPoint;
     }
     public boolean checkAnswer(String playerAnswer) {
         return answer.equalsIgnoreCase(playerAnswer);
     }
 }
-

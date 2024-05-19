@@ -3,6 +3,7 @@ package tugas;
 import java.util.Scanner;
 
 public class ScavengerHunt {
+    Scanner sc = new Scanner(System.in);
     private ScavengerHuntPoint startPoint;
     private ScavengerHuntPoint currentPlayerPoint;
     private int wrongAnswerCount;
@@ -11,14 +12,15 @@ public class ScavengerHunt {
         this.startPoint = startPoint;
         this.currentPlayerPoint = startPoint;
         this.wrongAnswerCount = 0;
+        this.sc = new Scanner(System.in);
     }
 
     public void moveToNextPoint(String playerAnswer) {
-        Scanner sc = new Scanner(System.in);
         if (currentPlayerPoint != null) {
             if (currentPlayerPoint.checkAnswer(playerAnswer)) {
-                if (currentPlayerPoint.getNextPoint() == null) { //double linked list (untuk bergerak maju)
+                if (currentPlayerPoint.getNextPoint() == null) { //double linked list untuk bergerak maju
                     System.out.println("Permainan telah berakhir.");
+                    currentPlayerPoint = null;
                     return;
                 }
                 currentPlayerPoint = currentPlayerPoint.getNextPoint();
@@ -26,7 +28,7 @@ public class ScavengerHunt {
             } else {
                 System.out.println("Jawaban salah! Coba lagi.");
                 wrongAnswerCount++;
-                if (wrongAnswerCount == 2) {
+                if (wrongAnswerCount == 2) { 
                     System.out.println("Jawaban yang benar adalah: " + currentPlayerPoint.getAnswer());
                     if (currentPlayerPoint.getNextPoint() == null) {
                         System.out.println("Permainan selesai. Sampai Jumpa!");
@@ -37,14 +39,10 @@ public class ScavengerHunt {
                         wrongAnswerCount = 0;
                     }
                 } else {
-                    System.out.println("Ingin kembali ke pertanyaan sebelumnya? (ya/tidak)");
+                    System.out.println("Ingin mencoba lagi pada soal ini? (ya/tidak)");
                     String choice = sc.nextLine();
-                    if (choice.equalsIgnoreCase("ya")) {
-                        if (currentPlayerPoint.getPrevPoint() != null) { //double linked list (untuk bergerak mundur)
-                            currentPlayerPoint = currentPlayerPoint.getPrevPoint();
-                            wrongAnswerCount = 0;
-                        } 
-                    } else if (choice.equalsIgnoreCase("tidak")){
+                    if (choice.equalsIgnoreCase("ya")) { //program akan mengulang sampai kondisi terpenuhi
+                    } else if (choice.equalsIgnoreCase("tidak")) {
                         System.out.println("Permainan selesai. Sampai Jumpa!");
                         currentPlayerPoint = null;
                         return;
@@ -56,7 +54,6 @@ public class ScavengerHunt {
     public void startGame() {
         System.out.println("Selamat datang di Scavenger Hunt Game!");
         System.out.println("Mulai dari titik awal:");
-        Scanner sc = new Scanner(System.in);
         while (currentPlayerPoint != null) {
             System.out.println("Soal: " + currentPlayerPoint.getQuestion());
             System.out.print("Jawaban Anda: ");
