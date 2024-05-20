@@ -25,11 +25,9 @@ public class ScavengerHuntPoint {
     public ScavengerHuntPoint getNextPoint() {
         return nextPoint;
     }
-
     public void setPrevPoint(ScavengerHuntPoint prevPoint) { //double linked list
         this.prevPoint = prevPoint;
     }
-
     public ScavengerHuntPoint getPrevPoint() { //double linked list
         return prevPoint;
     }
