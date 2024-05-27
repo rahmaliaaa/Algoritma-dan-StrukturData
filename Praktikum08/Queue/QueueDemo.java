@@ -8,7 +8,6 @@ public class QueueDemo {
         int kapasitas = sc.nextInt();
 
         Queue myQueue = new Queue(kapasitas);
-        
         int menu;
         do {
             System.out.println("Masukkan operasi yang diinginkan");

@@ -9,15 +9,12 @@ package Praktikum07;
             this.data = new String[size];
             this.top = -1;
         }
-
         public boolean isEmpty() {
             return (top == -1);
         }
-
         public boolean isFull() {
             return (top == size - 1);
         }
-
         public void push(String dt) {
             if (!isFull()) {
                 top++;
@@ -26,7 +23,6 @@ package Praktikum07;
                 System.out.println("Stack penuh!");
             }
         }
-
         public String pop() {
             if (!isEmpty()) {
                 String temp = data[top];
@@ -47,7 +43,6 @@ package Praktikum07;
         public static boolean isOperand(char c) {
             return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'));
         }
-
         public static boolean isOperator(char c) {
             return (c == '^' || c == '%' || c == '/' || c == '*' || c == '-' || c == '+');
         }
@@ -66,7 +61,6 @@ package Praktikum07;
                     return 0;
             }
         }
-
         public static String konversi(String postfix) {
             StackTugas operands = new StackTugas(postfix.length());
             for (int i = 0; i < postfix.length(); i++) {

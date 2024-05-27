@@ -28,7 +28,6 @@ public class Queue {
             System.out.println("Queue kosong");
         }
     }
-
     public void print() {
         if (isEmpty()) {
             System.out.println("Queue kosong");
@@ -42,12 +41,10 @@ public class Queue {
             System.out.print("Jumlah elemen : " + size);
         }
     }
-
     public void clear() {
         front = rear = -1;
         size = 0;
     }
-
     public void enqueue(Kendaraan dt) {
         if (isFull()) {
             System.out.println("Queue sudah penuh");

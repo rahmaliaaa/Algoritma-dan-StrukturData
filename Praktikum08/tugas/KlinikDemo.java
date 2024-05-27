@@ -1,5 +1,4 @@
 package tugas;
-
 import java.util.Scanner;
 public class KlinikDemo {
     public static void main(String[] args) {
@@ -7,9 +6,7 @@ public class KlinikDemo {
         System.out.print("Masukkan jumlah pasien yang akan didaftarkan: ");
         int kapasitas = sc.nextInt();
         int menu;
-
         Queue myQueue = new Queue(kapasitas);
-
         do {
             System.out.println("\nMasukkan operasi yang diinginkan");
             System.out.println("1. Input Data Pasien");
@@ -19,10 +16,8 @@ public class KlinikDemo {
             System.out.println("5. Mengosongkan antrian pasien");
             System.out.println("6. Exit");
             System.out.println("-----------------------------------------------------------");
-
             menu = sc.nextInt();
             sc.nextLine();
-
             switch (menu) {
                 case 1:
                     System.out.print("Masukkan nama: ");
@@ -32,7 +27,6 @@ public class KlinikDemo {
                     System.out.print("Masukkan jenis kelamin (L/P): ");
                     char jenisKelamin = sc.next().charAt(0);
                     sc.nextLine();
-
                     Pasien newPasien = new Pasien(nama, noID, jenisKelamin);
                     myQueue.enqueue(newPasien);
                     break;

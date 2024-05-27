@@ -1,5 +1,4 @@
 package tugas;
-
 public class Pasien {
     String nama;
     String noID;
@@ -10,7 +9,6 @@ public class Pasien {
         this.noID = noID;
         this.jenisKelamin = jenisKelamin;
     }
-
     public String toString () {
         return "Nama: " + nama + ", No. ID: " + noID + ", Jenis Kelamin: " + jenisKelamin;
     }

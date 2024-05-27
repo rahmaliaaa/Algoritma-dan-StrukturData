@@ -45,7 +45,7 @@ public class Queue {
         front = rear = -1;
         size = 0;
     }
-    public void enqueue(int dt) {
+    public void enqueue(Pasien dt) { //mengganti int menjadi Pasien
         if (isFull()){
             System.out.println("Queue sudah penuh");
         } else {

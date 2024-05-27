@@ -75,7 +75,7 @@ public class LinkedList {
             System.out.print("Linked list kosong");
         }
     }
-    public void insertBefore(int key, int input) {
+    public void insertBefore(int key, int input) { 
         Node newNode = new Node(input);
     
         if (!isEmpty()) {

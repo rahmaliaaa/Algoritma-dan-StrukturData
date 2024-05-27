@@ -50,14 +50,13 @@ public class Stack2 {
     public static int getDerajat(char c){
         switch (c) {
             case '^':
-                return 3; // Pangkat memiliki prioritas tertinggi
+                return 3; 
             case '*':
             case '/':
             case '%':
-                return 2; // Perkalian, pembagian, dan modulus memiliki prioritas kedua tertinggi
-            case '-':
+                return 2;
             case '+':
-                return 1; // Penambahan dan pengurangan memiliki prioritas terendah
+                return 1; 
             default:
                 return 0;
         }

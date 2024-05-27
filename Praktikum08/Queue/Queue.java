@@ -7,21 +7,19 @@ public class Queue {
     public int front;
     public int rear;
 
-    public Queue(int max) {
+    public Queue(int max) { //konstruktor
         this.max = max;
         this.data = new int[max];
         this.size = 0;
         this.front = this.rear = -1;
     }
-
     public boolean isEmpty() {
         return size == 0;
     }
-
     public boolean isFull() {
         return size == max;
     }
-    public void peek() {
+    public void peek() { //untuk melihat nilai paling depan
         if (!isEmpty()) {
             System.out.println("Elemen terdepan : " + data[front]);
         } else {

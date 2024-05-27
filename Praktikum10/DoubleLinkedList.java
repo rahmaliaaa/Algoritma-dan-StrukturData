@@ -12,7 +12,7 @@ public class DoubleLinkedList {
             System.out.print("Isi linked list : ");
             Node currentNode = head;
     
-            while (currentNode != null) {
+            while (currentNode != null) { //iterasi linked list sampai node terakhir
                 System.out.print(currentNode.data + "\t");
                 currentNode = currentNode.next;
             }
@@ -22,7 +22,7 @@ public class DoubleLinkedList {
         }
     }
     public void reversePrint(){
-        if (!isEmpty()){
+        if (!isEmpty()){ //apakah linked list tidak kosong
             System.out.print("Isi Linked list: ");
             Node currentNode = tail;
 
@@ -42,9 +42,9 @@ public class DoubleLinkedList {
             head = newNode;
             tail = newNode;
         } else {
-            newNode.next = head;
-            head.prev = newNode;
-            head = newNode;
+            newNode.next = head; //next node baru ke head
+            head.prev = newNode; //prev head ke node baru
+            head = newNode; 
         }
     }
     public void addLast(int input){
@@ -62,7 +62,7 @@ public class DoubleLinkedList {
     public void removeFirst(){
         if (isEmpty()){
             System.out.println("Linked list kosong");
-        } else if (head == tail){
+        } else if (head == tail){ //apakah hanya satu elemen
             head = null;
             tail = null;
         } else {

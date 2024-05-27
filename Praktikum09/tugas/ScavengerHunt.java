@@ -1,5 +1,4 @@
 package tugas;
-
 import java.util.Scanner;
 
 public class ScavengerHunt {
