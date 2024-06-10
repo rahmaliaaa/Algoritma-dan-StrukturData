@@ -1,0 +1,54 @@
+CREATE TABLE KARYAWAN (
+  Id INTEGER,
+  Nama TEXT,
+  TglLahir TEXT,
+  No_KTP INTEGER,
+  Posisi TEXT
+);
+CREATE TABLE KOKI (
+  Id INTEGER,
+  Sertifikasi TEXT
+);
+CREATE TABLE SUPPLIER (
+  Id INTEGER,
+  Nama TEXT,
+  Telepon INTEGER,
+  Email TEXT
+);
+CREATE TABLE KATEGORI (
+  Id INTEGER,
+  Nama TEXT
+);
+CREATE TABLE MENU (
+  Nama TEXT,
+  Harga INTEGER,
+  IdKategori INTEGER
+);
+CREATE TABLE MENU_HARIAN (
+  NamaMenu TEXT,
+  Tanggal DATETIME,
+  IdKoki INTEGER,
+  Jumlah INTEGER
+);
+CREATE TABLE BAHAN_BAKU_MENU (
+  NamaMenu TEXT,
+  NamaBahan TEXT,
+  Jumlah INTEGER,
+  Satuan TEXT
+);
+CREATE TABLE BAHAN_BAKU (
+  Nama TEXT,
+  Stok INTEGER,
+  Satuan TEXT
+);
+CREATE TABLE PEMBELIAN_BAHAN_BAKU (
+  Nota INTEGER,
+  NamaBahan TEXT,
+  Jumlah INTEGER,
+  Satuan TEXT,
+  HargaSatuan REAL,
+  Waktu DATETIME,
+  IdSupplier INTEGER,
+  IdKaryawan INTEGER
+);
+

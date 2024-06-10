@@ -70,15 +70,24 @@ public class BinaryTree {
             traverseInOrder(node.right);
         }
     }
-    void printLeaf(Node node){ //tambahan
+    void printLeaf(Node node){ //modifikasi tugas 2
         if (node != null){
-            return;
+            if (node.left == null && node.right == null){
+                System.out.print(" " + node.data);
+            }
+            printLeaf(node.left);
+            printLeaf(node.right);
+        }
+    }
+    int hitungLeaf(Node node){ //modifikasi tugas3
+        if (node == null){
+            return 0;
         }
         if (node.left == null && node.right == null){
-            System.out.print(" " + node.data);
+            return -1;
+        } else {
+            return hitungLeaf(node.left) + hitungLeaf(node.right);
         }
-        printLeaf(node.left);
-        printLeaf(node.right);
     }
     Node getSuccessor(Node del){
         Node successor = del.right;
@@ -89,7 +98,8 @@ public class BinaryTree {
             successor = successor.left;
         }
         if (successor != del.right){
-            successorParent.left = null;
+            successorParent.left = successor.right;
+            successor.right = del.right;
         }
         return successor;
     }
@@ -163,7 +173,6 @@ public class BinaryTree {
                         parent.right = successor;
                     }
                     successor.left = current.left;
-                    successor.right = current.right;
                 }
             }
         }
